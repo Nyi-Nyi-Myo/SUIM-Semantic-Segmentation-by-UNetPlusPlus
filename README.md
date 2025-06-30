@@ -7,7 +7,7 @@ This repository contains a semantic segmentation project focused on **underwater
 This project includes two model checkpoints:
 
 - 30 Epochs vs 50 Epochs
-- ✅ **Old Model:** Baseline performance  
+- ✅ **Old Model:** Baseline performance with 30 epochs  
 - ✅ **Final Model:** Improved version with better generalization, especially for small objects and reducing false positives.
 
 ---
@@ -47,7 +47,7 @@ Total train images: 1220 / Total val images: 305
 
 ## 🔨 Augmentation Setup
 
-For the **Final Model**, we applied carefully selected augmentations to improve generalization while avoiding object-missing issues:
+For the **Final Model**, the selected augmentations have been carefully applied to improve generalization while avoiding object-missing issues:
 
 ```python
 A.Compose([
@@ -89,15 +89,18 @@ Sea-floor/Rocks     (SR): IoU = 0.6832
 
 ## 🎨 Visualization Samples
 
-We provide a **visual comparison tool** showing:
+**Visual comparison tool** has been provided showing:
 
-- Original Image  
-- Ground Truth  
-- Old Model Prediction  
-- Final Model Prediction  
+- Original Image and Ground Truth  
+- Old Model Prediction vs. Final Model Prediction  
 
 📌 Example:
 ![Visualization Example](suim-firstvsfinal-unet++.png)  
+
+The model outputs of **testing set** are visualized with:
+
+- **Color-coded masks**
+- **Overlay with Class name labels**  
 
 📌 Example:
 ![Visualization Example](SUIM-testset-1-10.png)  
